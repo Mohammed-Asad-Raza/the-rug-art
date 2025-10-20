@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sophisticated design system for The Rug Art - luxury rug business
+All colors MUST be HSL. Warm, elegant palette inspired by traditional textiles.
+*/
+
+@layer base {
+  :root {
+    /* Core neutral palette */
+    --background: 35 20% 98%;
+    --foreground: 30 15% 15%;
+
+    /* Card and surfaces */
+    --card: 35 25% 96%;
+    --card-foreground: 30 15% 15%;
+
+    --popover: 35 25% 96%;
+    --popover-foreground: 30 15% 15%;
+
+    /* Brand colors - rich warm tones */
+    --primary: 25 45% 35%; /* Deep terracotta */
+    --primary-foreground: 35 20% 98%;
+    --primary-glow: 25 65% 45%;
+
+    /* Secondary - warm sand tones */
+    --secondary: 45 35% 85%;
+    --secondary-foreground: 30 25% 25%;
+
+    /* Muted tones */
+    --muted: 40 25% 92%;
+    --muted-foreground: 30 12% 45%;
+
+    /* Accent - golden threads */
+    --accent: 45 85% 65%;
+    --accent-foreground: 30 25% 15%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 35 20% 98%;
+
+    /* Borders and inputs */
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 25 45% 35%;
+
+    --radius: 0.5rem;
+
+    /* Custom design tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --shadow-elegant: 0 8px 32px -8px hsl(var(--primary) / 0.2);
+    --shadow-soft: 0 4px 16px -4px hsl(var(--foreground) / 0.1);
+    
+    /* Typography scale */
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    
+    /* Animation variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with warm, sophisticated tones */
+    --background: 30 15% 8%;
+    --foreground: 35 20% 92%;
+
+    --card: 30 20% 12%;
+    --card-foreground: 35 20% 92%;
+
+    --popover: 30 20% 12%;
+    --popover-foreground: 35 20% 92%;
+
+    --primary: 25 65% 55%;
+    --primary-foreground: 30 15% 8%;
+
+    --secondary: 30 15% 18%;
+    --secondary-foreground: 35 20% 92%;
+
+    --muted: 30 15% 18%;
+    --muted-foreground: 35 15% 65%;
+
+    --accent: 45 75% 60%;
+    --accent-foreground: 30 15% 8%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 35 20% 92%;
+
+    --border: 30 15% 22%;
+    --input: 30 15% 22%;
+    --ring: 25 65% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  /* Smooth animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)];
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .bg-subtle-gradient {
+    background: var(--gradient-subtle);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
