@@ -59,16 +59,12 @@ const Index = () => {
 
               <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 animate-fade-in">
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                  Expert on your
-                  <span className="block text-gradient bg-gradient-to-r from-yellow-400 to-amber-300 bg-clip-text text-transparent">
-                    Interior Decor
+                  <span className="block text-gradient py-3 bg-gradient-to-r from-yellow-400 to-amber-300 bg-clip-text text-transparent">
+                    Rugs, It's what we do.
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 opacity-90">
-                  We Are Manufacturers And Exporters Of Hand Tufted, Hand
-                  Knotted,
-                  <br />
-                  Indo-Nepali, Durries, Etc.
+                  And we do it better than anyone else.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   {/* <Button
@@ -385,7 +381,11 @@ const Index = () => {
                   Timeless elegance with intricate patterns and premium
                   materials.
                 </p>
-                <Button variant="outline" className="w-full">
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => handleNavigation("/products/hand-knotted")}
+                >
                   Explore Collection
                 </Button>
               </CardContent>
@@ -404,7 +404,11 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4">
                   Contemporary designs with superior comfort and durability.
                 </p>
-                <Button variant="outline" className="w-full">
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => handleNavigation("/products/hand-tufted")}
+                >
                   Explore Collection
                 </Button>
               </CardContent>
@@ -423,8 +427,12 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4">
                   Bespoke rugs tailored to your unique vision and space.
                 </p>
-                <Button variant="outline" className="w-full">
-                  Start Custom Order
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => handleNavigation("/products/flatweave")}
+                >
+                  Explore Collection
                 </Button>
               </CardContent>
             </Card>
