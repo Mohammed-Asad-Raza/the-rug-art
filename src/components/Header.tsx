@@ -72,7 +72,7 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-primary" />
-              <span>info@therugart.com</span>
+              <span>info@therugsart.com</span>
             </div>
           </div>
           <div className="hidden md:block text-muted-foreground">
