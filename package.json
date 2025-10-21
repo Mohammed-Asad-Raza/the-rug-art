@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Mohammed-Asad-Raza.github.io/the-rug-art",
+  "homepage": "https://therugsart.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
