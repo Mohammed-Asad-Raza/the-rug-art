@@ -91,7 +91,7 @@ const Contact = () => {
                           Visit Our Showroom
                         </h3>
                         <p className="text-muted-foreground">
-                          The Rug Art, Station Road Bhadohi,
+                          172, Pachabhaya, Bhadohi, Sant Ravidas Nagar,
                           <br />
                           Uttar Pradesh, 221401
                           <br />
@@ -129,9 +129,7 @@ const Contact = () => {
                         <p className="text-muted-foreground">
                           General: info@theruggart.com
                           <br />
-                          Sales: sales@theruggart.com
-                          <br />
-                          Custom Orders: custom@theruggart.com
+                          Orders: orders.therugart@gmail.com
                         </p>
                       </div>
                     </div>
