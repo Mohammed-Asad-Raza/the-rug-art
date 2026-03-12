@@ -127,7 +127,7 @@ const Contact = () => {
                       <div>
                         <h3 className="text-xl font-semibold mb-2">Email Us</h3>
                         <p className="text-muted-foreground">
-                          General: info@theruggart.com
+                          General: info.therugart@gmail.com
                           <br />
                           Orders: orders.therugart@gmail.com
                         </p>

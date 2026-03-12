@@ -117,7 +117,8 @@ const Footer = () => {
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
                 <span>
-                  The Rug Art, Station Road Bhadohi, Uttar Pradesh, India 221401{" "}
+                  The Rug Art, Station Road Bhadohi, Uttar Pradesh, India
+                  221401{" "}
                 </span>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -126,7 +127,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                <span>orders.therugart@gmail.com info@theruggart.com</span>
+                <span>orders.therugart@gmail.com info.therugart@gmail.com</span>
                 {/* <span>info@theruggart.com</span> */}
               </li>
             </ul>
